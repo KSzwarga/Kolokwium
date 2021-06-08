@@ -31,6 +31,11 @@
         justify-content: center;
         align-items: center;
     }
+    .active  {
+        background: red;
+        color: white;
+        
+    }
     
 </style>
 
@@ -38,8 +43,8 @@
     <div id="app">
         <div class="square" v-for='column in columns'>
             <div v-for="row in rows">
-                <div class="cell">
-                    <span class="cyfra">{{row}},{{column}}</span>
+                <div class="cell" :class="[active[0] == row && active[1] == column ? 'active' : '']">
+                        <span class="cyfra">{{row}},{{column}}</span>
                 </div>
             </div>
         </div>
@@ -51,7 +56,8 @@
         data: {
             message: 'Powodzenia',
             rows: 10,
-            columns: 10
+            columns: 10,
+            active: [5,1]
         }
     })
 </script>
