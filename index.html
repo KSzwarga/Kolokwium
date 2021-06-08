@@ -13,12 +13,22 @@
         border-radius: 10px;
         margin-bottom: 10px; 
         margin-right: 10px; 
+
+    }
+    .cyfra {
+        display: flex;
+        height: 100%;
+        width: 100%;
+        justify-content: center;
+        align-items: center;   
     }
 </style>
 <body>
-    <div class ="cell">
+
         <div id="app">
-        {{ message }}
+            <div class ="cell">
+                <span class ="cyfra">1</span>
+            </div>
         </div>
 
         <script>
@@ -29,7 +39,7 @@
             }
         })
         </script>
-    </div>
+
 </body>
 
 </html>
